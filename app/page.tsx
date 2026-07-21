@@ -98,8 +98,8 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="George Marcone - início">
-          GM
+        <a className="brand" href="#inicio" aria-label="GM Tech Solutions — início">
+          <img className="brand-logo-mark" src="/gm-tech-solutions-mark.svg" alt="GM Tech Solutions" />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#sobre">Sobre</a>
@@ -141,7 +141,7 @@ export default function Home() {
             </div>
           </article>
           <article className="feature-card">
-            <div className="feature-icon">GM</div>
+            <img className="feature-brand-mark" src="/gm-tech-solutions-mark.svg" alt="" aria-hidden="true" />
             <p className="card-kicker">Empresa</p>
             <h3>GM Tech Solutions</h3>
             <p>Produtos digitais, engenharia e arquitetura.</p>
@@ -334,7 +334,9 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand" href="#inicio">GM</a>
+        <a className="brand footer-company-logo" href="#inicio" aria-label="GM Tech Solutions — início">
+          <img className="brand-logo-full" src="/gm-tech-solutions-logo.svg" alt="GM Tech Solutions" />
+        </a>
         <p>George Marcone • Recife, Pernambuco, Brasil</p>
         <p>© 2026 GM Tech Solutions</p>
       </footer>
