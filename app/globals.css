@@ -197,3 +197,13 @@ footer p:nth-child(2) { margin-right: auto; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* GM Tech Solutions brand */
+.brand-logo-mark { display: block; height: 54px; width: 54px; }
+.brand-logo-full { display: block; height: auto; width: 210px; }
+.feature-brand-mark { border-radius: 14px; display: block; height: 54px; width: 54px; }
+.footer-company-logo { background: none; color: inherit; letter-spacing: normal; }
+@media (max-width: 700px) {
+  .brand-logo-mark { height: 46px; width: 46px; }
+  .brand-logo-full { width: 180px; }
+}
