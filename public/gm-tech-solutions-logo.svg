@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title desc">
+  <title id="title">GM Tech Solutions</title>
+  <desc id="desc">Logomarca da GM Tech Solutions</desc>
+  <defs>
+    <linearGradient id="gm-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#098CFF"/>
+      <stop offset=".5" stop-color="#3167F5"/>
+      <stop offset="1" stop-color="#7C24F4"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gm-gradient)" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M116 38H70c-29 0-48 20-48 52s19 52 48 52h46V93H76"/>
+    <path d="M94 142V83l35 31 35-31v59"/>
+  </g>
+  <text x="205" y="112" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-2">GM Tech Solutions</text>
+</svg>
