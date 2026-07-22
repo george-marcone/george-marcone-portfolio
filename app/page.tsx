@@ -94,12 +94,54 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function CompanyLogo({ className }: { className: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 760 180"
+      role="img"
+      aria-label="GM Tech Solutions"
+      focusable="false"
+    >
+      <defs>
+        <linearGradient id="gm-company-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#098CFF" />
+          <stop offset=".5" stopColor="#3167F5" />
+          <stop offset="1" stopColor="#7C24F4" />
+        </linearGradient>
+      </defs>
+      <g
+        transform="translate(5 8) scale(.9)"
+        fill="none"
+        stroke="url(#gm-company-gradient)"
+        strokeWidth="25"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+      >
+        <path d="M112 15H62C28 15 8 40 8 83s20 83 54 83h50V92H68" />
+        <path d="M80 166V76l45 42 45-42v90" />
+      </g>
+      <text
+        x="180"
+        y="112"
+        fill="#F8FAFC"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontSize="58"
+        fontWeight="700"
+        letterSpacing="-2"
+      >
+        GM Tech Solutions
+      </text>
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="GM Tech Solutions — início">
-          <img className="brand-logo-mark" src="/gm-tech-solutions-mark.svg" alt="GM Tech Solutions" />
+          <CompanyLogo className="brand-logo-full" />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#sobre">Sobre</a>
@@ -335,7 +377,7 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-company-logo" href="#inicio" aria-label="GM Tech Solutions — início">
-          <img className="brand-logo-full" src="/gm-tech-solutions-logo.svg" alt="GM Tech Solutions" />
+          <CompanyLogo className="brand-logo-full" />
         </a>
         <p>George Marcone • Recife, Pernambuco, Brasil</p>
         <p>© 2026 GM Tech Solutions</p>
