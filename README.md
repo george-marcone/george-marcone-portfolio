@@ -1,6 +1,8 @@
 # George Marcone - Portfólio profissional
 
-Portfólio profissional de George Marcone, Senior Software Engineer e Software Architect, com mais de 15 anos de experiência em engenharia de software, arquitetura, liderança técnica, cloud e sistemas críticos.
+Portfólio profissional de George Marcone, Senior Software Engineer e Software Architect, com mais de 15 anos de experiência em engenharia de software, arquitetura, liderança técnica, cloud, IA aplicada e sistemas críticos.
+
+O projeto em destaque é o HemoDinks, plataforma SaaS multiclínica em produção para gestão e controladoria de cirurgias, com faturamento, relatórios analíticos, pesquisa Full-Text Search, perfis de acesso e isolamento seguro de dados entre clínicas.
 
 ## Tecnologias
 
