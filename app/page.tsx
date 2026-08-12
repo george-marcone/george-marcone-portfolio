@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const technologies = [".NET", "Node.js", "TypeScript", "React", "Azure", "IA aplicada"];
 
 const strengths = [
@@ -191,7 +193,7 @@ export default function Home() {
             </div>
           </article>
           <article className="feature-card">
-            <img className="feature-brand-mark" src="/gm-tech-solutions-mark.svg" alt="" aria-hidden="true" />
+            <Image className="feature-brand-mark" src="/gm-tech-solutions-mark.svg" alt="" aria-hidden="true" width={54} height={54} />
             <p className="card-kicker">Empresa</p>
             <h3>GM Tech Solutions</h3>
             <p>Produtos digitais, engenharia e arquitetura.</p>
