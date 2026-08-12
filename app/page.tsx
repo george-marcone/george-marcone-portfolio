@@ -1,4 +1,4 @@
-const technologies = [".NET", "Node.js", "TypeScript", "React", "Azure"];
+const technologies = [".NET", "Node.js", "TypeScript", "React", "Azure", "IA aplicada"];
 
 const strengths = [
   {
@@ -23,8 +23,8 @@ const experiences = [
     period: "2026 — atual",
     company: "GM Tech Solutions",
     role: "Founder & Lead Software Engineer",
-    text: "Criação de produtos digitais próprios, definição de arquitetura, desenvolvimento full stack, cloud, segurança e evolução de soluções SaaS.",
-    tags: [".NET", "React", "Azure", "SaaS"],
+    text: "Concepção e evolução do HemoDinks, da descoberta à produção: produto SaaS multiclínica, arquitetura full stack, cloud Azure, segurança, isolamento de dados e engenharia assistida por IA.",
+    tags: [".NET", "React", "Azure", "Multi-tenant", "AI-assisted Engineering"],
   },
   {
     period: "2022 — 2026",
@@ -60,7 +60,7 @@ const skillGroups = [
   {
     index: "01",
     title: "Backend & APIs",
-    items: [".NET / C#", "Node.js", "TypeScript", "NestJS", "PHP / Laravel", "Python"],
+    items: ["ASP.NET Core / C#", "EF Core", "Node.js", "TypeScript", "NestJS", "PHP / Laravel", "Python"],
   },
   {
     index: "02",
@@ -70,7 +70,7 @@ const skillGroups = [
   {
     index: "03",
     title: "Cloud & DevOps",
-    items: ["Azure", "AWS", "GCP", "Docker", "GitHub Actions", "CI/CD"],
+    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "AWS", "GCP", "Docker", "GitHub Actions", "CI/CD"],
   },
   {
     index: "04",
@@ -79,7 +79,10 @@ const skillGroups = [
       "Clean Architecture",
       "CQRS",
       "DDD",
+      "Multi-tenancy",
       "Microsserviços",
+      "Arquitetura orientada a eventos",
+      "Full-Text Search",
       "SQL Server",
       "PostgreSQL",
       "Oracle",
@@ -87,6 +90,11 @@ const skillGroups = [
       "MongoDB",
       "Cassandra",
     ],
+  },
+  {
+    index: "05",
+    title: "IA aplicada à engenharia",
+    items: ["ChatGPT", "Codex", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos"],
   },
 ];
 
@@ -176,7 +184,7 @@ export default function Home() {
             <div className="feature-icon drop">H</div>
             <p className="card-kicker">Produto em destaque</p>
             <h3>HemoDinks</h3>
-            <p>SaaS para gestão e controladoria de cirurgias.</p>
+            <p>SaaS multiclínica em produção para gestão, faturamento e controladoria de cirurgias.</p>
             <div className="mini-product" aria-hidden="true">
               <span className="mini-line long" /><span className="mini-line" />
               <div className="mini-chart"><i /><i /><i /><i /><i /></div>
@@ -214,6 +222,9 @@ export default function Home() {
           <p>
             Atuo da descoberta à produção: transformo problemas complexos em soluções seguras, sustentáveis e preparadas para crescer. Minha trajetória combina profundidade técnica, proximidade com o código e capacidade de orientar pessoas e decisões.
           </p>
+          <p>
+            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação — sempre com revisão técnica, rastreabilidade e foco em qualidade.
+          </p>
         </div>
         <div className="metrics">
           {strengths.map((strength) => (
@@ -239,18 +250,20 @@ export default function Home() {
           <div className="project-copy">
             <p className="project-index">01 / PRODUTO SAAS</p>
             <h3>HemoDinks</h3>
-            <p className="project-summary">Gestão administrativa e controladoria de cirurgias médicas em uma plataforma segura, rastreável e preparada para múltiplas clínicas.</p>
+            <p className="project-summary">Plataforma SaaS multiclínica em produção para gestão e controladoria de cirurgias, com faturamento, relatórios analíticos e isolamento seguro dos dados de cada clínica.</p>
             <ul>
-              <li>Controle de pacientes, procedimentos e fluxo operacional</li>
-              <li>Perfis de acesso, arquivos e recuperação de senha</li>
-              <li>Autenticação em dois fatores para reforço da segurança</li>
-              <li>Envio automático de e-mails e notificações transacionais</li>
-              <li>Mensageria assíncrona com Azure Service Bus</li>
-              <li>Indicadores individuais e por grupos médicos</li>
-              <li>Ambientes de homologação e produção na Azure</li>
+              <li>Onboarding de clínicas, planos, módulos e equipes em uma operação multi-tenant</li>
+              <li>Login unificado por usuário e clínica, com troca segura de contexto e sessões controladas</li>
+              <li>Isolamento automático de dados nas consultas, gravações e relacionamentos entre entidades</li>
+              <li>Gestão de faturamento, itens, glosas, recursos, recebimentos e contas a receber</li>
+              <li>Relatórios analíticos com filtros combinados, indicadores e exportações em PDF e XLSX</li>
+              <li>Pesquisa inteligente com Full-Text Search em pacientes, catálogos e dados assistenciais</li>
+              <li>Seis perfis de acesso e três formas de identificação para integrantes das equipes clínicas</li>
+              <li>JWT, 2FA, rate limiting, auditoria, idempotência e políticas de autorização</li>
+              <li>Operação na Azure com containers, funções, banco SQL, blobs e mensageria assíncrona</li>
             </ul>
             <div className="tag-list">
-              {[".NET 10", "React", "Azure SQL", "Service Bus", "CQRS", "Clean Architecture", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
+              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
             </div>
             <div className="project-actions">
               <a
@@ -280,8 +293,9 @@ export default function Home() {
               <small>Segurança • Escala • Observabilidade</small>
             </div>
             <div className="architecture-bottom">
-              <span>Azure SQL</span><span>Blob Storage</span><span>Functions</span>
-              <span>Service Bus</span><span>E-mail</span><span>2FA</span>
+              <span>Container Apps</span><span>Azure SQL</span><span>Blob Storage</span>
+              <span>Functions</span><span>Service Bus</span><span>Full-Text Search</span>
+              <span>Auth & Auditoria</span>
             </div>
           </div>
         </article>
@@ -347,7 +361,7 @@ export default function Home() {
         </div>
         <div className="principles">
           <p>Princípios que orientam meu trabalho</p>
-          <div>{["Clean Architecture", "SOLID", "DDD", "CQRS", "Observabilidade", "Testes automatizados", "Segurança", "CI/CD"].map((item) => <span key={item}>{item}</span>)}</div>
+          <div>{["Clean Architecture", "SOLID", "DDD", "CQRS", "Multi-tenancy", "Observabilidade", "Testes automatizados", "Segurança", "CI/CD", "IA aplicada à engenharia"].map((item) => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
 
