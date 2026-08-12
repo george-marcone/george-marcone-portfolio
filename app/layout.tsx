@@ -4,10 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "George Marcone | Senior Software Engineer & Software Architect",
   description:
-    "Portfólio de George Marcone: engenharia de software, arquitetura, liderança técnica, cloud e produtos digitais.",
-  other: {
-    "codex-preview": "development",
-  },
+    "Portfólio de George Marcone: engenharia de software, arquitetura, liderança técnica, cloud, IA aplicada e produtos SaaS, incluindo o HemoDinks.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
