@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./portfolio-enhancements.css";
 
 export const metadata: Metadata = {
   title: "George Marcone | Senior Software Engineer & Software Architect",
