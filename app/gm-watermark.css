@@ -8,7 +8,7 @@ body::after {
   transform: translate(-50%, -50%) scale(.985);
   z-index: 2;
   pointer-events: none;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAA...TRUNCATED_FOR_DISPLAY...") center / contain no-repeat;
+  background: url('/gm-tech-solutions-mark.svg') center / contain no-repeat;
   opacity: .055;
   mix-blend-mode: screen;
   filter: saturate(1.08) drop-shadow(0 0 30px rgba(65, 95, 255, .18));
