@@ -1,0 +1,41 @@
+/* Visual enhancements requested for the portfolio */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('/gm-tech-solutions-mark.svg') center 46% / min(42vw, 520px) no-repeat;
+  opacity: .018;
+  filter: saturate(1.15) drop-shadow(0 0 36px rgba(75, 92, 246, .12));
+  animation: gm-watermark-pulse 7s ease-in-out infinite;
+}
+
+main,
+.site-header,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gm-watermark-pulse {
+  0%, 100% { opacity: .014; transform: scale(.985); }
+  50% { opacity: .042; transform: scale(1.015); }
+}
+
+/* Hero: portrait beside the name without changing the current JSX */
+.hero-copy {
+  position: relative;
+  padding-right: 164px;
+}
+
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  width: 136px;
+  height: 136px;
+  top: 42px;
+  right: 0;
+  border-radius: 30px;
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRs
