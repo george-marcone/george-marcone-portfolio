@@ -1,0 +1,39 @@
+body::after {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: min(46vw, 560px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) scale(.985);
+  z-index: 2;
+  pointer-events: none;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAA...TRUNCATED_FOR_DISPLAY...") center / contain no-repeat;
+  opacity: .055;
+  mix-blend-mode: screen;
+  filter: saturate(1.08) drop-shadow(0 0 30px rgba(65, 95, 255, .18));
+  animation: gm-watermark-blink 6.5s ease-in-out infinite;
+}
+
+@keyframes gm-watermark-blink {
+  0%, 100% {
+    opacity: .035;
+    transform: translate(-50%, -50%) scale(.985);
+  }
+  50% {
+    opacity: .095;
+    transform: translate(-50%, -50%) scale(1.015);
+  }
+}
+
+@media (max-width: 900px) {
+  body::after { width: min(68vw, 440px); opacity: .045; }
+}
+
+@media (max-width: 600px) {
+  body::after { width: 78vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; opacity: .05; }
+}
