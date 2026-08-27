@@ -1,4 +1,4 @@
-const technologies = [".NET", "Node.js", "TypeScript", "React", "Azure", "IA aplicada"];
+const technologies = [".NET", "Node.js", "TypeScript", "React / Next.js", "Azure", "IA aplicada"];
 
 const strengths = [
   {
@@ -23,28 +23,28 @@ const experiences = [
     period: "2026 — atual",
     company: "GM Tech Solutions",
     role: "Founder & Lead Software Engineer",
-    text: "Concepção e evolução do HemoDinks, da descoberta à produção: produto SaaS multiclínica, arquitetura full stack, cloud Azure, segurança, isolamento de dados e engenharia assistida por IA.",
-    tags: [".NET", "React", "Azure", "Multi-tenant", "AI-assisted Engineering"],
+    text: "Concepção e evolução do HemoDinks, da descoberta à produção: produto SaaS multiclínica, arquitetura full stack, cloud Azure, segurança, isolamento de dados, observabilidade, automações operacionais e engenharia assistida por IA.",
+    tags: [".NET", "React / Next.js", "Azure", "Multi-tenant", "AI-assisted Engineering"],
   },
   {
     period: "2022 — 2026",
     company: "CAST • Sebrae-SP",
     role: "Senior Software Engineer & Technical Lead",
-    text: "Liderança técnica de cinco profissionais e modernização de plataformas corporativas utilizadas por milhares de pessoas.",
-    tags: ["Node.js", "TypeScript", "React", "GCP"],
+    text: "Liderança técnica de cinco profissionais e modernização de plataformas corporativas utilizadas por milhares de pessoas, com atuação em Node.js, TypeScript, Vue.js, PHP/Laravel, integrações e cloud.",
+    tags: ["Node.js", "TypeScript", "Vue.js", "Laravel", "GCP"],
   },
   {
     period: "2021 — 2022",
     company: "Pulsati • Digital Republic • Indra",
     role: "Tech Lead & Senior Software Engineer",
-    text: "Sistemas hospitalares, educação e pagamentos: sustentação crítica, APIs, microsserviços, CI/CD e alta disponibilidade.",
+    text: "Sistemas hospitalares, educação e pagamentos: sustentação crítica, APIs, microsserviços, CI/CD, alta disponibilidade e evolução arquitetural.",
     tags: ["C#", ".NET", "SQL Server", "AWS"],
   },
   {
     period: "2011 — 2021",
     company: "MV Sistemas",
     role: "Software Developer, Systems Analyst & Tech Lead",
-    text: "Quase uma década evoluindo plataformas hospitalares no Brasil e no exterior, com foco em estabilidade, performance e modernização.",
+    text: "Quase uma década evoluindo plataformas hospitalares no Brasil e no exterior, com foco em estabilidade, performance, modernização, integração de sistemas e sustentação de ambientes críticos.",
     tags: ["Healthcare", "Oracle", "AWS", "AngularJS"],
   },
   {
@@ -60,41 +60,32 @@ const skillGroups = [
   {
     index: "01",
     title: "Backend & APIs",
-    items: ["ASP.NET Core / C#", "EF Core", "Node.js", "TypeScript", "NestJS", "PHP / Laravel", "Python"],
+    items: ["ASP.NET Core / C#", "EF Core", "Node.js", "TypeScript", "Express", "Fastify", "NestJS", "PHP / Laravel", "Python"],
   },
   {
     index: "02",
     title: "Frontend",
-    items: ["React", "Vue.js", "Nuxt", "AngularJS", "HTML5", "CSS"],
+    items: ["React", "Next.js", "Vue.js", "Nuxt", "AngularJS", "HTML5", "CSS"],
   },
   {
     index: "03",
-    title: "Cloud & DevOps",
-    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "AWS", "GCP", "Docker", "GitHub Actions", "CI/CD"],
+    title: "Cloud, DevOps & Operação",
+    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "Gerenciamento de recursos Azure", "Blue/Green Deployment", "Automations para controle de APIs e recursos Azure", "AWS", "GCP", "Docker / Containers", "GitHub Actions", "CI/CD"],
   },
   {
     index: "04",
-    title: "Arquitetura & Dados",
-    items: [
-      "Clean Architecture",
-      "CQRS",
-      "DDD",
-      "Multi-tenancy",
-      "Microsserviços",
-      "Arquitetura orientada a eventos",
-      "Full-Text Search",
-      "SQL Server",
-      "PostgreSQL",
-      "Oracle",
-      "MySQL",
-      "MongoDB",
-      "Cassandra",
-    ],
+    title: "Arquitetura, Design Patterns & Dados",
+    items: ["Clean Architecture", "SOLID", "CQRS", "DDD", "MVC", "MVVM", "Multi-tenancy", "Microsserviços", "Event-Driven Systems", "Container-based Architecture", "Full-Text Search", "SQL Server", "PostgreSQL", "Oracle", "MySQL", "MongoDB", "Cassandra"],
   },
   {
     index: "05",
     title: "IA aplicada à engenharia",
-    items: ["ChatGPT", "Codex", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos"],
+    items: ["ChatGPT", "Codex", "Claude Code", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos"],
+  },
+  {
+    index: "06",
+    title: "Observabilidade, Segurança & Qualidade",
+    items: ["OpenTelemetry", "New Relic", "Grafana", "Logs e monitoramento de erros", "JWT", "2FA", "Rate Limiting", "Auditoria", "Idempotência", "LGPD e tratamento de dados sensíveis", "Testes automatizados", "Playwright"],
   },
 ];
 
@@ -168,7 +159,7 @@ export default function Home() {
           <h1>George <span>Marcone</span></h1>
           <h2>Senior Software Engineer & Software Architect</h2>
           <p className="hero-description">
-            Mais de 15 anos construindo sistemas críticos, produtos digitais e arquiteturas escaláveis.
+            Mais de 15 anos construindo sistemas críticos, produtos digitais, plataformas SaaS e arquiteturas escaláveis.
           </p>
           <div className="tech-row" aria-label="Principais tecnologias">
             {technologies.map((technology) => <span key={technology}>{technology}</span>)}
@@ -184,7 +175,7 @@ export default function Home() {
             <div className="feature-icon drop">H</div>
             <p className="card-kicker">Produto em destaque</p>
             <h3>HemoDinks</h3>
-            <p>SaaS multiclínica em produção para gestão, faturamento e controladoria de cirurgias.</p>
+            <p>SaaS multiclínica em produção para gestão, faturamento, controladoria, observabilidade e segurança operacional.</p>
             <div className="mini-product" aria-hidden="true">
               <span className="mini-line long" /><span className="mini-line" />
               <div className="mini-chart"><i /><i /><i /><i /><i /></div>
@@ -194,13 +185,13 @@ export default function Home() {
             <img className="feature-brand-mark" src="/gm-tech-solutions-mark.svg" alt="" aria-hidden="true" />
             <p className="card-kicker">Empresa</p>
             <h3>GM Tech Solutions</h3>
-            <p>Produtos digitais, engenharia e arquitetura.</p>
+            <p>Produtos digitais, engenharia, arquitetura e soluções cloud.</p>
             <div className="node-map" aria-hidden="true"><i /><i /><i /><i /></div>
           </article>
           <article className="feature-card compact-card">
             <div className="cloud-icon" aria-hidden="true">☁</div>
             <h3>Arquitetura Cloud</h3>
-            <p>Azure • Containers • Serverless</p>
+            <p>Azure • Containers • Serverless • Blue/Green</p>
           </article>
           <article className="feature-card compact-card years-card">
             <p className="big-number">+15</p>
@@ -217,13 +208,13 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p className="lead">
-            Sou engenheiro de software, líder técnico e arquiteto com experiência em sistemas corporativos, APIs, integrações e plataformas de alta disponibilidade.
+            Sou engenheiro de software, líder técnico e arquiteto com experiência em sistemas corporativos, APIs, integrações, plataformas de alta disponibilidade e produtos SaaS.
           </p>
           <p>
-            Atuo da descoberta à produção: transformo problemas complexos em soluções seguras, sustentáveis e preparadas para crescer. Minha trajetória combina profundidade técnica, proximidade com o código e capacidade de orientar pessoas e decisões.
+            Atuo da descoberta à produção: transformo problemas complexos em soluções seguras, sustentáveis e preparadas para crescer. Minha trajetória combina profundidade técnica, proximidade com o código, arquitetura de software, gestão de recursos em nuvem e capacidade de orientar pessoas e decisões.
           </p>
           <p>
-            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação — sempre com revisão técnica, rastreabilidade e foco em qualidade.
+            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação, utilizando ferramentas como ChatGPT, Codex, Claude Code e GitHub Copilot, sempre com revisão técnica, rastreabilidade e foco em qualidade.
           </p>
         </div>
         <div className="metrics">
@@ -250,20 +241,25 @@ export default function Home() {
           <div className="project-copy">
             <p className="project-index">01 / PRODUTO SAAS</p>
             <h3>HemoDinks</h3>
-            <p className="project-summary">Plataforma SaaS multiclínica em produção para gestão e controladoria de cirurgias, com faturamento, relatórios analíticos e isolamento seguro dos dados de cada clínica.</p>
+            <p className="project-summary">Plataforma SaaS multiclínica em produção para gestão e controladoria de cirurgias, com faturamento, relatórios analíticos, observabilidade, segurança, tutoriais guiados e isolamento seguro dos dados de cada clínica.</p>
             <ul>
-              <li>Onboarding de clínicas, planos, módulos e equipes em uma operação multi-tenant</li>
-              <li>Login unificado por usuário e clínica, com troca segura de contexto e sessões controladas</li>
-              <li>Isolamento automático de dados nas consultas, gravações e relacionamentos entre entidades</li>
-              <li>Gestão de faturamento, itens, glosas, recursos, recebimentos e contas a receber</li>
-              <li>Relatórios analíticos com filtros combinados, indicadores e exportações em PDF e XLSX</li>
+              <li>SaaS multiclínica em produção com onboarding de clínicas, planos, módulos, equipes e configuração por tenant</li>
+              <li>Login unificado por usuário e clínica, com troca segura de contexto, sessões controladas e gerenciamento de perfis de acesso</li>
+              <li>Segurança e isolamento automático de dados nas consultas, gravações e relacionamentos entre entidades</li>
+              <li>LGPD aplicada ao tratamento de dados sensíveis, com controles de acesso, rastreabilidade e auditoria</li>
+              <li>Sistema de controladoria e gestão de faturamento, incluindo itens, glosas, recursos, recebimentos e contas a receber</li>
+              <li>Tela de gráficos e indicadores do faturamento para acompanhamento gerencial e análise operacional</li>
+              <li>Tela de relatórios com filtros combinados, indicadores e emissão/exportação em PDF e XLSX</li>
+              <li>Tela de monitoramento de logs e erros para suporte à observabilidade e diagnóstico da aplicação</li>
+              <li>Tutoriais guiados e narrados das principais funcionalidades, com automação de testes e gravações via Playwright</li>
               <li>Pesquisa inteligente com Full-Text Search em pacientes, catálogos e dados assistenciais</li>
-              <li>Seis perfis de acesso e três formas de identificação para integrantes das equipes clínicas</li>
               <li>JWT, 2FA, rate limiting, auditoria, idempotência e políticas de autorização</li>
-              <li>Operação na Azure com containers, funções, banco SQL, blobs e mensageria assíncrona</li>
+              <li>Operação na Azure com Container Apps, Functions, Azure SQL, Blob Storage, Service Bus e automações para controle de uso e custos</li>
+              <li>Blue/Green Deployment para publicação controlada de novas versões, redução de risco e rollback operacional</li>
+              <li>Observabilidade com New Relic, OpenTelemetry e Grafana</li>
             </ul>
             <div className="tag-list">
-              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
+              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "LGPD", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Blue/Green", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
             </div>
             <div className="project-actions">
               <a
@@ -295,7 +291,7 @@ export default function Home() {
             <div className="architecture-bottom">
               <span>Container Apps</span><span>Azure SQL</span><span>Blob Storage</span>
               <span>Functions</span><span>Service Bus</span><span>Full-Text Search</span>
-              <span>Auth & Auditoria</span>
+              <span>Auth & Auditoria</span><span>Blue/Green</span><span>Automations</span>
             </div>
           </div>
         </article>
@@ -311,13 +307,13 @@ export default function Home() {
             <p className="project-index">03 / EVENTO</p>
             <h3>Feira do Empreendedor</h3>
             <p>Backend para evento de grande porte com antifraude, integrações de SMS, e-mail, reCAPTCHA e migração de dados.</p>
-            <div className="tag-list"><span>Node.js</span><span>APIs</span><span>Automação</span></div>
+            <div className="tag-list"><span>Node.js</span><span>Express</span><span>APIs</span><span>Automação</span></div>
           </article>
           <article>
             <p className="project-index">04 / SAÚDE</p>
             <h3>Sistemas hospitalares críticos</h3>
             <p>Evolução, sustentação e modernização de prontuários e plataformas de gestão utilizadas no Brasil e exterior.</p>
-            <div className="tag-list"><span>.NET</span><span>Oracle</span><span>AWS</span><span>High Availability</span></div>
+            <div className="tag-list"><span>.NET</span><span>Oracle</span><span>AWS</span><span>AngularJS</span><span>High Availability</span></div>
           </article>
         </div>
       </section>
@@ -361,7 +357,7 @@ export default function Home() {
         </div>
         <div className="principles">
           <p>Princípios que orientam meu trabalho</p>
-          <div>{["Clean Architecture", "SOLID", "DDD", "CQRS", "Multi-tenancy", "Observabilidade", "Testes automatizados", "Segurança", "CI/CD", "IA aplicada à engenharia"].map((item) => <span key={item}>{item}</span>)}</div>
+          <div>{["Clean Architecture", "SOLID", "DDD", "CQRS", "MVC", "MVVM", "Event-Driven Systems", "Multi-tenancy", "Observabilidade", "Testes automatizados", "Segurança", "LGPD", "CI/CD", "Blue/Green Deployment", "IA aplicada à engenharia"].map((item) => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
 
