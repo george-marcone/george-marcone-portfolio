@@ -23,7 +23,7 @@ const experiences = [
     period: "2026 — atual",
     company: "GM Tech Solutions",
     role: "Founder & Lead Software Engineer",
-    text: "Concepção e evolução do HemoDinks, da descoberta à produção: produto SaaS multiclínica, arquitetura full stack, cloud Azure, segurança, isolamento de dados, observabilidade, automações operacionais e engenharia assistida por IA.",
+    text: "Concepção, lançamento e evolução contínua do HemoDinks em produção: SaaS multiclínica com arquitetura full stack, autenticação e isolamento de dados, gestão de infraestrutura Azure e custos, CI/CD com Blue/Green, observabilidade e orquestração de agentes Codex orientada a riscos.",
     tags: [".NET", "React / Next.js", "Azure", "Multi-tenant", "AI-assisted Engineering"],
   },
   {
@@ -70,7 +70,7 @@ const skillGroups = [
   {
     index: "03",
     title: "Cloud, DevOps & Operação",
-    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "Gerenciamento de recursos Azure", "Blue/Green Deployment", "Automations para controle de APIs e recursos Azure", "AWS", "GCP", "Docker / Containers", "GitHub Actions", "CI/CD"],
+    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "Gerenciamento de recursos e custos Azure", "Azure Automation / Runbooks e agendamentos", "Blue/Green Deployment e rollback", "GHCR / versionamento e retenção de imagens", "Migrations desacopladas do deploy", "AWS", "GCP", "Docker / Containers", "GitHub Actions", "GitHub Projects / Boards", "Burn-up / acompanhamento de entregas", "CI/CD"],
   },
   {
     index: "04",
@@ -80,12 +80,12 @@ const skillGroups = [
   {
     index: "05",
     title: "IA aplicada à engenharia",
-    items: ["ChatGPT", "Codex", "Claude Code", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos"],
+    items: ["ChatGPT", "Codex", "Claude Code", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos", "Codex AGENTS.md / agentes especializados", "Orquestração e delegação por complexidade e risco"],
   },
   {
     index: "06",
     title: "Observabilidade, Segurança & Qualidade",
-    items: ["OpenTelemetry", "New Relic", "Grafana", "Logs e monitoramento de erros", "JWT", "2FA", "Rate Limiting", "Auditoria", "Idempotência", "LGPD e tratamento de dados sensíveis", "Testes automatizados", "Playwright"],
+    items: ["OpenTelemetry", "New Relic", "Grafana", "Logs e monitoramento de erros", "JWT", "Gestão de sessões e contexto de clínica", "Rate Limiting", "Auditoria", "Idempotência", "LGPD e tratamento de dados sensíveis", "Testes automatizados", "Playwright"],
   },
 ];
 
@@ -214,7 +214,7 @@ export default function Home() {
             Atuo da descoberta à produção: transformo problemas complexos em soluções seguras, sustentáveis e preparadas para crescer. Minha trajetória combina profundidade técnica, proximidade com o código, arquitetura de software, gestão de recursos em nuvem e capacidade de orientar pessoas e decisões.
           </p>
           <p>
-            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação, utilizando ferramentas como ChatGPT, Codex, Claude Code e GitHub Copilot, sempre com revisão técnica, rastreabilidade e foco em qualidade.
+            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação. Estruturo agentes especializados do Codex com AGENTS.md e diretrizes de delegação conforme complexidade, dependências e risco, mantendo revisão humana, rastreabilidade e foco em qualidade. Pesquiso continuamente tecnologias e práticas para minha atualização profissional e para evoluir o HemoDinks já lançado em produção.
           </p>
         </div>
         <div className="metrics">
@@ -244,7 +244,7 @@ export default function Home() {
             <p className="project-summary">Plataforma SaaS multiclínica em produção para gestão e controladoria de cirurgias, com faturamento, relatórios analíticos, observabilidade, segurança, tutoriais guiados e isolamento seguro dos dados de cada clínica.</p>
             <ul>
               <li>SaaS multiclínica em produção com onboarding de clínicas, planos, módulos, equipes e configuração por tenant</li>
-              <li>Login unificado por usuário e clínica, com troca segura de contexto, sessões controladas e gerenciamento de perfis de acesso</li>
+              <li>Login unificado com API .NET 10, autenticação por JWT, sessões e cookies de segurança, perfis de acesso, seleção de clínica conforme autorização e troca controlada de contexto multiclínica</li>
               <li>Segurança e isolamento automático de dados nas consultas, gravações e relacionamentos entre entidades</li>
               <li>LGPD aplicada ao tratamento de dados sensíveis, com controles de acesso, rastreabilidade e auditoria</li>
               <li>Sistema de controladoria e gestão de faturamento, incluindo itens, glosas, recursos, recebimentos e contas a receber</li>
@@ -253,13 +253,18 @@ export default function Home() {
               <li>Tela de monitoramento de logs e erros para suporte à observabilidade e diagnóstico da aplicação</li>
               <li>Tutoriais guiados e narrados das principais funcionalidades, com automação de testes e gravações via Playwright</li>
               <li>Pesquisa inteligente com Full-Text Search em pacientes, catálogos e dados assistenciais</li>
-              <li>JWT, 2FA, rate limiting, auditoria, idempotência e políticas de autorização</li>
-              <li>Operação na Azure com Container Apps, Functions, Azure SQL, Blob Storage, Service Bus e automações para controle de uso e custos</li>
-              <li>Blue/Green Deployment para publicação controlada de novas versões, redução de risco e rollback operacional</li>
+              <li>Proteções no backend com validação de sessão, revogação de credenciais, rate limiting, auditoria, idempotência e políticas de autorização; evolução de segurança guiada por backlog e testes</li>
+              <li>Gestão de Azure Container Apps, Functions, Azure SQL, Blob Storage e Service Bus, com análise de consumo, dimensionamento de recursos e decisões de arquitetura voltadas a custo operacional, disponibilidade e performance</li>
+              <li>Automação operacional com Azure Automation, Runbooks e agendamentos de início e parada da API conforme janelas de utilização, considerando o impacto sobre disponibilidade e custos</li>
+              <li>Blue/Green Deployment com revisões e distribuição de tráfego no Azure Container Apps, publicação controlada e estratégia de rollback; migrations gerenciadas separadamente do ciclo de deploy da aplicação</li>
+              <li>Gestão do ciclo de vida de imagens Docker no GitHub Container Registry (GHCR), com versionamento, retenção e limpeza segura de artefatos antigos</li>
+              <li>GitHub Projects com boards de backlog, andamento, revisão e entrega, acompanhamento por gráfico burn-up, issues, pull requests e workflows de GitHub Actions</li>
+              <li>Agentes inteligentes Codex com AGENTS.md e configuração de agentes especializados para análise, delegação e execução proporcional à complexidade, aos riscos e às dependências</li>
+              <li>Melhoria contínua de um produto em produção, com pesquisa técnica, testes automatizados, engenharia orientada a baixo custo, alta performance, segurança e proteção de dados alinhada à LGPD</li>
               <li>Observabilidade com New Relic, OpenTelemetry e Grafana</li>
             </ul>
             <div className="tag-list">
-              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "LGPD", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Blue/Green", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
+              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "LGPD", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Blue/Green", "GHCR", "Azure Automation", "GitHub Projects", "Codex Agents", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
             </div>
             <div className="project-actions">
               <a
