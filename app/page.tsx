@@ -147,6 +147,7 @@ export default function Home() {
           <a href="#experiencia">Experiência</a>
           <a href="#projetos">Projetos</a>
           <a href="#competencias">Competências</a>
+          <a href="#artigos">Artigos</a>
         </nav>
         <a className="contact-pill" href="#contato">Contato <Arrow /></a>
       </header>
@@ -321,6 +322,19 @@ export default function Home() {
             <div className="tag-list"><span>.NET</span><span>Oracle</span><span>AWS</span><span>AngularJS</span><span>High Availability</span></div>
           </article>
         </div>
+      </section>
+
+      <section className="section codex-feature" id="artigos">
+        <div className="section-heading wide-heading">
+          <div><p className="eyebrow"><span /> Artigos e engenharia aplicada</p><h2>Insights de <em>arquitetura e IA.</em></h2></div>
+          <p>Conteúdo técnico fundamentado na evolução do HemoDinks e nos desafios reais de engenharia.</p>
+        </div>
+        <article className="codex-feature-card">
+          <p className="project-index">ARTIGO TÉCNICO / CODEX / 2026</p>
+          <h3>Orquestração inteligente de agentes Codex</h3>
+          <p>AGENTS.md, delegação por risco, agentes especializados e qualidade de software na prática.</p>
+          <a className="button button-primary" href="/artigos/orquestracao-agentes-codex">Ler artigo completo <Arrow /></a>
+        </article>
       </section>
 
       <section className="section experience" id="experiencia">
