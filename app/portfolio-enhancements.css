@@ -110,3 +110,6 @@ main, .site-header, footer { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; opacity: .02; transform: none; }
 }
+
+/* Technical article entry */
+.codex-feature{background:#080f23}.codex-feature-card{border:1px solid rgba(134,119,228,.45);border-radius:22px;padding:42px;background:linear-gradient(135deg,rgba(17,39,80,.75),rgba(31,22,61,.7));max-width:900px}.codex-feature-card h3{font-size:clamp(28px,3vw,42px);margin:15px 0}.codex-feature-card p:not(.project-index){color:#b9c7e1;line-height:1.7;max-width:640px;margin-bottom:28px}@media(max-width:700px){.codex-feature-card{padding:27px}}
