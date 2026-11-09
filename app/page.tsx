@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { JsonLd } from "./json-ld";
 
 const technologies = [".NET / C#", "React / Next.js", "Node.js", "TypeScript", "SQL Server", "Azure", "DevOps", "IA aplicada"];
 
@@ -98,6 +99,27 @@ const skillGroups = [
   },
 ];
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "George Marcone",
+  url: "https://george-portifolio.gestao-saude.tec.br/",
+  image: "https://george-portifolio.gestao-saude.tec.br/og-image.png",
+  jobTitle: "Senior Software Engineer, Tech Lead & Software Architect",
+  description:
+    "Engenheiro de software, líder técnico e arquiteto com mais de 15 anos de experiência em sistemas corporativos, SaaS, cloud, DevOps e IA aplicada.",
+  address: { "@type": "PostalAddress", addressLocality: "Recife", addressRegion: "PE", addressCountry: "BR" },
+  worksFor: [
+    { "@type": "Organization", name: "i4Pro" },
+    { "@type": "Organization", name: "GM Tech Solutions" },
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/george-marcone-morais-dos-santos-71466527/",
+    "https://github.com/george-marcone",
+  ],
+  knowsAbout: [".NET", "C#", "ASP.NET Core", "React", "Next.js", "Node.js", "TypeScript", "SQL Server", "Azure", "DevOps", "Docker", "Keycloak", "Clean Architecture", "Arquitetura de Software", "IA aplicada à engenharia"],
+};
+
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -147,6 +169,7 @@ function CompanyLogo({ className }: { className: string }) {
 export default function Home() {
   return (
     <main>
+      <JsonLd data={personJsonLd} />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="GM Tech Solutions — início">
           <CompanyLogo className="brand-logo-full" />

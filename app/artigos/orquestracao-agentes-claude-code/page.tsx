@@ -1,10 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "../../json-ld";
 import "../orquestracao-agentes-codex/artigo.css";
 
+const articlePath = "/artigos/orquestracao-agentes-claude-code";
+const articleTitle = "Orquestração de agentes com Claude Code | George Marcone";
+const articleDescription = "Como estruturar CLAUDE.md, subagentes especializados, hooks, permissões e worktrees para usar o Claude Code com segurança e previsibilidade no HemoDinks.";
+
 export const metadata: Metadata = {
-  title: "Orquestração de agentes com Claude Code | George Marcone",
-  description: "Como estruturar CLAUDE.md, subagentes especializados, hooks, permissões e worktrees para usar o Claude Code com segurança e previsibilidade no HemoDinks.",
+  title: articleTitle,
+  description: articleDescription,
+  alternates: { canonical: articlePath },
+  openGraph: {
+    type: "article",
+    locale: "pt_BR",
+    url: articlePath,
+    siteName: "George Marcone",
+    title: articleTitle,
+    description: articleDescription,
+    publishedTime: "2026-11-09",
+    authors: ["George Marcone"],
+    images: [{ url: "/og/orquestracao-agentes-claude-code.png", width: 1200, height: 630, alt: "Orquestração de agentes com Claude Code" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: articleTitle,
+    description: articleDescription,
+    images: ["/og/orquestracao-agentes-claude-code.png"],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "Orquestração de agentes com Claude Code",
+  description: articleDescription,
+  datePublished: "2026-11-09",
+  inLanguage: "pt-BR",
+  url: `https://george-portifolio.gestao-saude.tec.br${articlePath}`,
+  image: "https://george-portifolio.gestao-saude.tec.br/og/orquestracao-agentes-claude-code.png",
+  author: { "@type": "Person", name: "George Marcone", url: "https://george-portifolio.gestao-saude.tec.br/" },
+  publisher: { "@type": "Organization", name: "GM Tech Solutions" },
 };
 
 const pillars = [
@@ -17,6 +53,7 @@ const pillars = [
 export default function ArtigoClaudeCode() {
   return (
     <main className="codex-article">
+      <JsonLd data={articleJsonLd} />
       <header className="codex-topbar">
         <Link href="/" aria-label="Voltar ao portfólio">← George Marcone</Link>
         <a href="#conclusao">Conclusão ↓</a>
