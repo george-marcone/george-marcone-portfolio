@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const technologies = [".NET", "Node.js", "TypeScript", "React / Next.js", "Azure", "IA aplicada"];
+const technologies = [".NET / C#", "React / Next.js", "Node.js", "TypeScript", "SQL Server", "Azure", "DevOps", "IA aplicada"];
 
 const strengths = [
   {
@@ -22,10 +22,17 @@ const strengths = [
 
 const experiences = [
   {
+    period: "set. 2026 — atual",
+    company: "i4Pro • Projeto CMI (Prudential)",
+    role: "Especialista em Sistemas | Full Stack .NET & React | DevOps",
+    text: "Atuação full stack no projeto CMI (Comissão de Intermediação) da Prudential, plataforma corporativa de gestão, envio e aprovação de notas fiscais de comissões de corretores. Desenvolvimento de APIs REST em .NET com regras de negócio complexas e fluxos de aprovação hierárquica, rejeição e estorno; evolução de interfaces em React; integração com Keycloak, OAuth2 e Identity Brokering para perfis, permissões e controle de acesso por corretora; integrações com Middleware e sistemas ERP; scripts SQL Server e migrações automatizadas; ambientes containerizados com Docker, Portainer, Traefik, RabbitMQ, Harbor, Keycloak e Hangfire; correções de UAT, gestão de releases, branches, Pull Requests e automação de deploys.",
+    tags: ["C#", "ASP.NET Core", "React", "SQL Server", "Keycloak", "OAuth2", "RabbitMQ", "Hangfire", "Docker", "Traefik", "CI/CD"],
+  },
+  {
     period: "2026 — atual",
     company: "GM Tech Solutions",
     role: "Founder & Lead Software Engineer",
-    text: "Concepção, lançamento e evolução contínua do HemoDinks em produção: SaaS multiclínica com arquitetura full stack, autenticação e isolamento de dados, gestão de infraestrutura Azure e custos, CI/CD com Blue/Green, observabilidade e orquestração de agentes Codex orientada a riscos.",
+    text: "Concepção, lançamento e evolução contínua do HemoDinks em produção: SaaS multiclínica com arquitetura full stack, autenticação e isolamento de dados, gestão de infraestrutura Azure e custos, CI/CD com Blue/Green, observabilidade e orquestração de agentes Codex e Claude Code orientada a riscos.",
     tags: [".NET", "React / Next.js", "Azure", "Multi-tenant", "AI-assisted Engineering"],
   },
   {
@@ -62,7 +69,7 @@ const skillGroups = [
   {
     index: "01",
     title: "Backend & APIs",
-    items: ["ASP.NET Core / C#", "EF Core", "Node.js", "TypeScript", "Express", "Fastify", "NestJS", "PHP / Laravel", "Python"],
+    items: ["ASP.NET Core / C#", "EF Core", "APIs REST", "Hangfire", "RabbitMQ", "Integrações com Middleware e ERP", "Node.js", "TypeScript", "Express", "Fastify", "NestJS", "PHP / Laravel", "Python"],
   },
   {
     index: "02",
@@ -72,7 +79,7 @@ const skillGroups = [
   {
     index: "03",
     title: "Cloud, DevOps & Operação",
-    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "Gerenciamento de recursos e custos Azure", "Azure Automation / Runbooks e agendamentos", "Blue/Green Deployment e rollback", "GHCR / versionamento e retenção de imagens", "Migrations desacopladas do deploy", "AWS", "GCP", "Docker / Containers", "GitHub Actions", "GitHub Projects / Boards", "Burn-up / acompanhamento de entregas", "CI/CD"],
+    items: ["Azure Container Apps", "Azure Functions", "Azure SQL", "Blob Storage", "Service Bus", "Gerenciamento de recursos e custos Azure", "Azure Automation / Runbooks e agendamentos", "Blue/Green Deployment e rollback", "GHCR / versionamento e retenção de imagens", "Migrations desacopladas do deploy", "AWS", "GCP", "Docker / Containers", "Portainer", "Traefik", "Harbor", "GitHub Actions", "GitHub Projects / Boards", "Burn-up / acompanhamento de entregas", "CI/CD"],
   },
   {
     index: "04",
@@ -82,12 +89,12 @@ const skillGroups = [
   {
     index: "05",
     title: "IA aplicada à engenharia",
-    items: ["ChatGPT", "Codex", "Claude Code", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos", "Codex AGENTS.md / agentes especializados", "Orquestração e delegação por complexidade e risco"],
+    items: ["ChatGPT", "Codex", "Claude Code", "GitHub Copilot", "Spec-driven Development", "Prompt Engineering", "Fluxos agênticos", "Codex AGENTS.md / agentes especializados", "Claude Code CLAUDE.md / subagentes, hooks e permissões", "Orquestração e delegação por complexidade e risco"],
   },
   {
     index: "06",
     title: "Observabilidade, Segurança & Qualidade",
-    items: ["OpenTelemetry", "New Relic", "Grafana", "Logs e monitoramento de erros", "JWT", "Gestão de sessões e contexto de clínica", "Rate Limiting", "Auditoria", "Idempotência", "LGPD e tratamento de dados sensíveis", "Testes automatizados", "Playwright"],
+    items: ["OpenTelemetry", "New Relic", "Grafana", "Logs e monitoramento de erros", "JWT", "Keycloak", "OAuth2 / Identity Brokering", "Controle de acesso por perfil e organização", "Gestão de sessões e contexto de clínica", "Rate Limiting", "Auditoria", "Idempotência", "LGPD e tratamento de dados sensíveis", "Testes automatizados", "Playwright"],
   },
 ];
 
@@ -160,7 +167,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> Arquitetura • Desenvolvimento • Nuvem</p>
           <h1>George <span>Marcone</span></h1>
-          <h2>Senior Software Engineer & Software Architect</h2>
+          <h2>Senior Software Engineer, Tech Lead & Software Architect</h2>
           <p className="hero-description">
             Mais de 15 anos construindo sistemas críticos, produtos digitais, plataformas SaaS e arquiteturas escaláveis.
           </p>
@@ -211,13 +218,16 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p className="lead">
-            Sou engenheiro de software, líder técnico e arquiteto com experiência em sistemas corporativos, APIs, integrações, plataformas de alta disponibilidade e produtos SaaS.
+            Sou Senior Software Engineer, Tech Lead e Software Architect, com mais de 15 anos de experiência em desenvolvimento, arquitetura, modernização e sustentação de sistemas corporativos nos setores de saúde, educação, governo e serviços digitais.
+          </p>
+          <p>
+            Minha atuação combina liderança técnica, desenvolvimento full stack, arquitetura de software, cloud computing, DevOps, segurança e visão de negócio. Trabalho com .NET, C#, Node.js, TypeScript, React, Vue.js, SQL Server e Azure, aplicando Clean Architecture, SOLID, DDD, CQRS e boas práticas de engenharia. Atualmente sou Especialista em Sistemas na i4Pro, no projeto CMI da Prudential, e, pela GM Tech Solutions, desenvolvo e evoluo o HemoDinks, plataforma SaaS multiclínica já em produção.
           </p>
           <p>
             Atuo da descoberta à produção: transformo problemas complexos em soluções seguras, sustentáveis e preparadas para crescer. Minha trajetória combina profundidade técnica, proximidade com o código, arquitetura de software, gestão de recursos em nuvem e capacidade de orientar pessoas e decisões.
           </p>
           <p>
-            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação. Estruturo agentes especializados do Codex com AGENTS.md e diretrizes de delegação conforme complexidade, dependências e risco, mantendo revisão humana, rastreabilidade e foco em qualidade. Pesquiso continuamente tecnologias e práticas para minha atualização profissional e para evoluir o HemoDinks já lançado em produção.
+            Aplico inteligência artificial de forma pragmática em descoberta, especificação, arquitetura, implementação, refatoração, testes e documentação. Utilizo ChatGPT, Codex, Claude Code e GitHub Copilot, estruturando agentes especializados com AGENTS.md e CLAUDE.md e diretrizes de delegação conforme complexidade, dependências e risco, mantendo revisão humana, rastreabilidade e foco em qualidade. Pesquiso continuamente tecnologias e práticas para minha atualização profissional e para evoluir o HemoDinks já lançado em produção.
           </p>
         </div>
         <div className="metrics">
@@ -262,12 +272,12 @@ export default function Home() {
               <li>Blue/Green Deployment com revisões e distribuição de tráfego no Azure Container Apps, publicação controlada e estratégia de rollback; migrations gerenciadas separadamente do ciclo de deploy da aplicação</li>
               <li>Gestão do ciclo de vida de imagens Docker no GitHub Container Registry (GHCR), com versionamento, retenção e limpeza segura de artefatos antigos</li>
               <li>GitHub Projects com boards de backlog, andamento, revisão e entrega, acompanhamento por gráfico burn-up, issues, pull requests e workflows de GitHub Actions</li>
-              <li>Agentes inteligentes Codex com AGENTS.md e configuração de agentes especializados para análise, delegação e execução proporcional à complexidade, aos riscos e às dependências</li>
+              <li>Agentes inteligentes Codex e Claude Code com AGENTS.md, CLAUDE.md e configuração de agentes especializados para análise, delegação e execução proporcional à complexidade, aos riscos e às dependências</li>
               <li>Melhoria contínua de um produto em produção, com pesquisa técnica, testes automatizados, engenharia orientada a baixo custo, alta performance, segurança e proteção de dados alinhada à LGPD</li>
               <li>Observabilidade com New Relic, OpenTelemetry e Grafana</li>
             </ul>
             <div className="tag-list">
-              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "LGPD", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Blue/Green", "GHCR", "Azure Automation", "GitHub Projects", "Codex Agents", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
+              {[".NET 10", "React", "Azure SQL", "Multi-tenant", "LGPD", "Full-Text Search", "Service Bus", "CQRS", "Clean Architecture", "Blue/Green", "GHCR", "Azure Automation", "GitHub Projects", "Codex Agents", "Claude Code", "Docker"].map((tag) => <span key={tag}>{tag}</span>)}
             </div>
             <div className="project-actions">
               <a
@@ -331,12 +341,20 @@ export default function Home() {
           <div><p className="eyebrow"><span /> Artigos e engenharia aplicada</p><h2>Insights de <em>arquitetura e IA.</em></h2></div>
           <p>Conteúdo técnico fundamentado na evolução do HemoDinks e nos desafios reais de engenharia.</p>
         </div>
-        <article className="codex-feature-card">
-          <p className="project-index">ARTIGO TÉCNICO / CODEX / 2026</p>
-          <h3>Orquestração inteligente de agentes Codex</h3>
-          <p>AGENTS.md, delegação por risco, agentes especializados e qualidade de software na prática.</p>
-          <a className="button button-primary" href="/artigos/orquestracao-agentes-codex">Ler artigo completo <Arrow /></a>
-        </article>
+        <div className="article-grid">
+          <article className="codex-feature-card">
+            <p className="project-index">ARTIGO TÉCNICO / CLAUDE CODE / 2026</p>
+            <h3>Orquestração de agentes com Claude Code</h3>
+            <p>CLAUDE.md, subagentes especializados, hooks, permissões e worktrees para delegar com segurança.</p>
+            <a className="button button-primary" href="/artigos/orquestracao-agentes-claude-code">Ler artigo completo <Arrow /></a>
+          </article>
+          <article className="codex-feature-card">
+            <p className="project-index">ARTIGO TÉCNICO / CODEX / 2026</p>
+            <h3>Orquestração inteligente de agentes Codex</h3>
+            <p>AGENTS.md, delegação por risco, agentes especializados e qualidade de software na prática.</p>
+            <a className="button button-primary" href="/artigos/orquestracao-agentes-codex">Ler artigo completo <Arrow /></a>
+          </article>
+        </div>
       </section>
 
       <section className="section experience" id="experiencia">
