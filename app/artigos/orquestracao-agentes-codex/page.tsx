@@ -1,10 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "../../json-ld";
 import "./artigo.css";
 
+const articlePath = "/artigos/orquestracao-agentes-codex";
+const articleTitle = "Orquestração inteligente de agentes Codex | George Marcone";
+const articleDescription = "Um estudo de caso de engenharia de software com AGENTS.md, agentes especializados, delegação por risco, segurança e testes no HemoDinks.";
+
 export const metadata: Metadata = {
-  title: "Orquestração inteligente de agentes Codex | George Marcone",
-  description: "Um estudo de caso de engenharia de software com AGENTS.md, agentes especializados, delegação por risco, segurança e testes no HemoDinks.",
+  title: articleTitle,
+  description: articleDescription,
+  alternates: { canonical: articlePath },
+  openGraph: {
+    type: "article",
+    locale: "pt_BR",
+    url: articlePath,
+    siteName: "George Marcone",
+    title: articleTitle,
+    description: articleDescription,
+    publishedTime: "2026-10-11",
+    authors: ["George Marcone"],
+    images: [{ url: "/og/orquestracao-agentes-codex.png", width: 1200, height: 630, alt: "Orquestração inteligente de agentes Codex" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: articleTitle,
+    description: articleDescription,
+    images: ["/og/orquestracao-agentes-codex.png"],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "Orquestração inteligente de agentes Codex",
+  description: articleDescription,
+  datePublished: "2026-10-11",
+  inLanguage: "pt-BR",
+  url: `https://george-portifolio.gestao-saude.tec.br${articlePath}`,
+  image: "https://george-portifolio.gestao-saude.tec.br/og/orquestracao-agentes-codex.png",
+  author: { "@type": "Person", name: "George Marcone", url: "https://george-portifolio.gestao-saude.tec.br/" },
+  publisher: { "@type": "Organization", name: "GM Tech Solutions" },
 };
 
 const pillars = [
@@ -17,6 +53,7 @@ const pillars = [
 export default function ArtigoCodex() {
   return (
     <main className="codex-article">
+      <JsonLd data={articleJsonLd} />
       <header className="codex-topbar">
         <Link href="/" aria-label="Voltar ao portfólio">← George Marcone</Link>
         <a href="#conclusao">Conclusão ↓</a>
